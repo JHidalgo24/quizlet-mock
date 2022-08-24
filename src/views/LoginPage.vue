@@ -1,6 +1,6 @@
 <template>
 
-  <v-row>
+  <v-row class="ma-0 pa-0">
     <v-col cols sm="12" xl="4" lg="4">
 
     </v-col>
