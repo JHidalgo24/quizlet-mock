@@ -18,7 +18,7 @@
             </v-btn>
             <v-divider></v-divider>
 
-            <v-btn to="/" class="ma-2" text color="#de5246">
+            <v-btn @click="$emit('google-click')" class="ma-2" text color="#de5246">
               Use Google
               <v-icon>mdi-google</v-icon>
             </v-btn>
@@ -32,8 +32,6 @@
         <v-img v-else src="https://www.memeatlas.com/images/pepeThumbnails/pepe-apu-turning-into-schizo-thumbnail.png"></v-img>
         <v-spacer></v-spacer>
         <h1>Stop trying to navigate via the address bar. You're already signed in</h1>
-
-
 
       </v-card>
     </v-col>
