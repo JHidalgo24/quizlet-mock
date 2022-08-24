@@ -5,6 +5,8 @@ import LoginPage from "@/views/LoginPage";
 import signupPage from "@/views/Signup-Page";
 import browsingPage from "@/views/BrowsingPage";
 import createPage from "@/views/CreatePage";
+import userSets from "@/views/UserSets";
+import accountPage from "@/views/AccountPage";
 
 
 Vue.use(VueRouter);
@@ -14,7 +16,9 @@ let routes = [
     {path: '/login-page',component: LoginPage},
     {path: '/signup-page',component: signupPage},
     {path: '/browse-items',component: browsingPage},
-    {path: '/create-page',component: createPage}
+    {path: '/create-page',component: createPage},
+    {path: '/my-sets',component: userSets},
+    {path: '/account-page',component: accountPage}
 ];
 
 let router = new VueRouter({routes});
