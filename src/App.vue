@@ -8,17 +8,17 @@
         elevation="3"
 
     >
-      <router-link to="/" style="text-decoration: none; color: inherit;">Quizalt</router-link>
+      <h1 style="text-decoration: none; color: inherit;">Quizalt</h1>
       <v-spacer></v-spacer>
       <v-btn to="/FAQ" text > FAQ <v-icon>mdi-frequently-asked-questions</v-icon></v-btn>
 
     </v-app-bar>
     <v-main>
-      <router-view :errorMessage="errorMessage" @email-login="loginWithEmail" @user-signup="signUp" :authUser="authUser"
+      <router-view :errorSignup="errorSignup" :errorMessage="errorMessage" @email-login="loginWithEmail" @user-signup="signUp" :authUser="authUser"
                    @logoutuser="logOut" @google-click="loginWithGoogle"></router-view>
     </v-main>
 
-    <v-bottom-navigation app grow fixed shift v-model="value">
+    <v-bottom-navigation app style="position: fixed" grow fixed shift v-model="value">
       <v-btn icon to="/">
         <span>Home</span>
         <v-icon>mdi-home</v-icon>
@@ -85,8 +85,7 @@ export default {
             // ...
           })
           .catch((error) => {
-            let errorMessage = error.message;
-            this.errorMessage = errorMessage
+            this.errorMessage = error.message;
           });
 
       if (this.authUser !== null) {
@@ -104,9 +103,7 @@ export default {
             // ...
           })
           .catch((error) => {
-            let errorCode = error.code;
-            let errorMessage = error.message;
-            console.log(errorCode + errorMessage);
+            this.errorSignup  = error.message;
           });
 
       if (this.authUser !== null) {
@@ -120,7 +117,8 @@ export default {
   data: () => ({
     authUser: null,
     value: null,
-    errorMessage: ''
+    errorMessage: '',
+    errorSignup:''
   }),
   beforeCreate: async function () {
     await auth.onAuthStateChanged(x => {

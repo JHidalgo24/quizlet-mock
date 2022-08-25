@@ -18,6 +18,7 @@
               Register
               <v-icon>mdi-plus</v-icon>
             </v-btn>
+            <h5 style="color: red">{{ this.errorSignup }}</h5>
             <v-divider></v-divider>
 
             <v-btn @click="$emit('google-click')" class="ma-2" text color="#de5246">
@@ -48,6 +49,10 @@ export default {
   props: {
     authUser: {
       type: Object,
+      required: true
+    },
+    errorSignup: {
+      type: String,
       required: true
     }
   },

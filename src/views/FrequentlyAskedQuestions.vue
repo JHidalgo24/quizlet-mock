@@ -4,7 +4,10 @@
     <h3>Why I use image URLs instead of uploads</h3>
     <hr>
     <h4>The reason is that it costs more money to upload an image than it would to save a url that your phone can load.
-      This is what lets the website be free and lets you use images</h4>
+      This is what lets the website be free and lets you use images.
+      <br>
+      <br>
+      I encourage you to upload these images to a free image uploading service (IMGUR) and then pasting your URL</h4>
     <br>
     <h3>Local Storage Save</h3>
     <hr>
