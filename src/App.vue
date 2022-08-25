@@ -11,7 +11,7 @@
       <router-link to="/" style="text-decoration: none; color: inherit;">Quizalt</router-link>
       <v-spacer></v-spacer>
       <v-btn to="/FAQ" text > FAQ <v-icon>mdi-frequently-asked-questions</v-icon></v-btn>
-
+      <v-btn @click="outputMe">press me</v-btn>
 
     </v-app-bar>
     <v-main>
@@ -63,6 +63,8 @@ import router from "@/router/router";
 import {auth, firebase} from "@/firebase/firebase";
 import User from "@/Models/User";
 
+
+
 export default {
   name: 'App',
   router,
@@ -111,6 +113,9 @@ export default {
       if (this.authUser !== null) {
         router.push('/')
       }
+    },
+    outputMe(){
+      console.log(`${process.env.VUE_APP_FIREBASE_API_KEY}`);
     }
   },
   data: () => ({
