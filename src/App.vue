@@ -11,7 +11,6 @@
       <router-link to="/" style="text-decoration: none; color: inherit;">Quizalt</router-link>
       <v-spacer></v-spacer>
       <v-btn to="/FAQ" text > FAQ <v-icon>mdi-frequently-asked-questions</v-icon></v-btn>
-      <v-btn @click="outputMe">press me</v-btn>
 
     </v-app-bar>
     <v-main>
@@ -115,7 +114,7 @@ export default {
       }
     },
     outputMe(){
-      console.log(`${process.env.VUE_APP_FIREBASE_API_KEY}`);
+      console.log();
     }
   },
   data: () => ({
