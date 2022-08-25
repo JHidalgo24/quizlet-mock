@@ -10,11 +10,13 @@
     >
       <router-link to="/" style="text-decoration: none; color: inherit;">Quizalt</router-link>
       <v-spacer></v-spacer>
+      <v-btn to="/FAQ" text > FAQ <v-icon>mdi-frequently-asked-questions</v-icon></v-btn>
 
 
     </v-app-bar>
     <v-main>
-      <router-view :errorMessage="errorMessage" @email-login="loginWithEmail" @user-signup="signUp" :authUser="authUser" @logoutuser="logOut" @google-click="loginWithGoogle"></router-view>
+      <router-view :errorMessage="errorMessage" @email-login="loginWithEmail" @user-signup="signUp" :authUser="authUser"
+                   @logoutuser="logOut" @google-click="loginWithGoogle"></router-view>
     </v-main>
 
     <v-bottom-navigation app grow fixed shift v-model="value">
@@ -26,7 +28,7 @@
         <span>Browse</span>
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
-      <v-btn to="/create-page" icon>
+      <v-btn v-show="authUser !== null" to="/create-page" icon>
         <span>Create</span>
         <v-icon>mdi-plus</v-icon>
       </v-btn>
@@ -40,16 +42,16 @@
         <v-icon>mdi-account</v-icon>
       </v-btn>
 
-        <v-btn v-show="authUser === null" to="/signup-page" icon>
+      <v-btn v-show="authUser === null" to="/signup-page" icon>
         <span>Register</span>
         <v-icon>mdi-account-plus</v-icon>
-        </v-btn>
+      </v-btn>
 
 
-        <v-btn v-show="authUser !== null" to="/my-sets" icon>
+      <v-btn v-show="authUser !== null" to="/my-sets" icon>
         <span>My Sets</span>
         <v-icon>mdi-book</v-icon>
-        </v-btn>
+      </v-btn>
 
 
     </v-bottom-navigation>
@@ -74,7 +76,7 @@ export default {
 
     },
 
-    async loginWithEmail(email,password){
+    async loginWithEmail(email, password) {
       await firebase.auth().signInWithEmailAndPassword(email, password)
           .then((userCredential) => {
             // Signed in
@@ -86,14 +88,14 @@ export default {
             this.errorMessage = errorMessage
           });
 
-        if (this.authUser !== null){
-          router.push('/')
-        }
+      if (this.authUser !== null) {
+        router.push('/')
+      }
     },
     async logOut() {
       await auth.signOut().then(router.push('/'))
     },
-    async signUp(email,password){
+    async signUp(email, password) {
       firebase.auth().createUserWithEmailAndPassword(email, password)
           .then((userCredential) => {
             // Signed in
@@ -103,10 +105,10 @@ export default {
           .catch((error) => {
             let errorCode = error.code;
             let errorMessage = error.message;
-            console.log(errorCode +  errorMessage);
+            console.log(errorCode + errorMessage);
           });
 
-      if (this.authUser !== null){
+      if (this.authUser !== null) {
         router.push('/')
       }
     }
@@ -114,7 +116,7 @@ export default {
   data: () => ({
     authUser: null,
     value: null,
-    errorMessage:''
+    errorMessage: ''
   }),
   beforeCreate: async function () {
     await auth.onAuthStateChanged(x => {

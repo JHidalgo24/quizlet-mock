@@ -7,6 +7,7 @@ import browsingPage from "@/views/BrowsingPage";
 import createPage from "@/views/CreatePage";
 import userSets from "@/views/UserSets";
 import accountPage from "@/views/AccountPage";
+import frequentlyAskedQuestions from "@/views/FrequentlyAskedQuestions";
 
 
 Vue.use(VueRouter);
@@ -18,7 +19,8 @@ let routes = [
     {path: '/browse-items',component: browsingPage},
     {path: '/create-page',component: createPage},
     {path: '/my-sets',component: userSets},
-    {path: '/account-page',component: accountPage}
+    {path: '/account-page',component: accountPage},
+    {path: '/FAQ',component: frequentlyAskedQuestions}
 ];
 
 let router = new VueRouter({routes});
