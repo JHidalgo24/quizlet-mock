@@ -13,9 +13,11 @@
               <h4>Sets: 0</h4>
             </v-card-text>
             <v-spacer></v-spacer>
-          <v-card-actions class="card-actions">
-            <v-btn @click="$emit('logoutuser')">
-              log-out
+          <v-card-actions class="card-actions text-right">
+            <v-spacer></v-spacer>
+            <v-btn text @click="$emit('logoutuser')">
+              Log-Out
+              <v-icon>mdi-exit-run</v-icon>
             </v-btn>
           </v-card-actions>
         </v-card>

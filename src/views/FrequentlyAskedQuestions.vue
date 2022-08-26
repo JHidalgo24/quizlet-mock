@@ -12,14 +12,18 @@
     <h3>Local Storage Save</h3>
     <hr>
     <h4>
-      Your browser has storage available where certains things are saved. If you enable local storage save you will be able to access your information faster than it being pulled from my server.
+      Your browser has storage available where certains things are saved. If you enable local storage save you will be
+      able to access your information faster than it being pulled from my server.
     </h4>
     <br>
     <h3>Keep it a secret</h3>
     <hr>
     <h4>
-      There is a cap to uploads because I am not rich. I use a free database option so the more people hear about the app the more it will cost me. As of right now there is no cap. So don't share this app too much
+      There is a cap to uploads because I am not rich. I use a free database option so the more people hear about the
+      app the more it will cost me. As of right now there is no cap. So don't share this app too much
     </h4>
+    <br>
+    <br>
 
 
   </div>
