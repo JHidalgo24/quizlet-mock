@@ -7,14 +7,10 @@
       This is what lets the website be free and lets you use images.
       <br>
       <br>
-      I encourage you to upload these images to a free image uploading service (IMGUR) and then pasting your URL</h4>
-    <br>
-    <h3>Local Storage Save</h3>
-    <hr>
-    <h4>
-      Your browser has storage available where certains things are saved. If you enable local storage save you will be
-      able to access your information faster than it being pulled from my server.
+      I encourage you to upload these images to a free image uploading service (IMGUR) and then pasting your URL
+      Make sure that you are copying the image address and not the website's address
     </h4>
+
     <br>
     <h3>Keep it a secret</h3>
     <hr>

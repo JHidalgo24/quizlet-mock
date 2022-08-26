@@ -42,7 +42,7 @@
                           label="Definition"></v-textarea>
             <v-text-field filled rounded v-show="item.hasImage" v-model="item.imageURL" :placeholder="item.imageURL"
                           :value="item.imageURL" class="mx-2"
-                          label="Image"></v-text-field>
+                          label="Image (Image Address URL)"></v-text-field>
             <v-switch v-model="item.hasImage" label="Add Image" @change="removeImage(item)">
             </v-switch>
 
@@ -58,6 +58,7 @@
         </v-btn>
       </v-col>
     </v-row>
+
   </div>
 </template>
 
