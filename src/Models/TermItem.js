@@ -2,12 +2,14 @@ class TermItem{
     term = '';
     definition = ''
     id = 0;
-    imageURL = ''
-    constructor(id,term, definition, imageURL) {
+    imageURL = ""
+    hasImage = false;
+    constructor(id,term, definition, imageURL,hasImage) {
         this.id = id;
         this.term = term;
         this.definition = definition;
         this.imageURL = imageURL
+        this.hasImage = hasImage;
     }
 }
 
